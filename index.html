@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div>
+        <h3>Área do Retângulo</h3>
+        <p>Valor da Base</p>
+        <input id="base" type="number"><br/>
+        <p>Valor da Altura</p>
+        <input id="altura" type="number"><br>
+        <button onclick="area()">Calcular</button>
+        <p>O Resultado é <span id="arearet"></span></p> 
+    </div>
+    <!-- Questão 2 -->
+    <div>
+        <h3>Área do Círculo</h3>
+        <p>Informe o Raio</p>
+        <input id="raio" type="number"><br/>
+        <button onclick="areacirculo()">Calcular</button> <br>
+        <p>O Resultado é <span id="areacir"></span></p>
+    </div>
+    
+    <!-- Questão 3 -->
+    <div>
+        <h3>Hipotenusa</h3>
+        <p>Informe o Cateto Oposto</p>
+        <input id="cateto" type="number"><br/>
+        <div class="form-text">Ex.: 3.78 ou 9</div>
+        <p>Informe o Cateto Adjacente</p>
+        <input id="catetoa" type="number"><br/>
+        <div class="form-text">Ex.: 9 ou 3.78</div>
+        <button onclick="hipotenusa()">Calcular</button> <br>
+        <p>O Resultado é <span id="hipot"></span></p>
+        
+    </div>
+
+    <!-- Questão 4 -->
+    <div>
+        <h3>Conversão do Dólar</h3>
+        Informe a cotação do dólar <br/>
+        <input id="cotacaodolar" type="number"><br/>
+        <div class="form-text">Ex.: 3.78 ou 9.00</div>
+        Informe o valor em reais <br/>
+        <input id="valorreais" type="number"><br/>
+        <div class="form-text">Ex.: 9.00 ou 3.78</div>
+        <button onclick="conversaodolar()">Calcular</button> <br>
+        O valor em dólar é igual a $<span id="dolar"></span>
+    </div>
+    
+    <!-- Questão 5 -->
+    <div>
+        <h3>Conversão Temperatura °C para °F</h3>
+        Informe a temperatura em graus °C <br/>
+        <input id="tempcelsius" type="number"><br/>
+        <button onclick="temperatura()">Calcular</button> <br>
+        A temperatura em Fahrenheit é: <span id="fahrenheit"></span>°F
+    </div>
+    
+    <!-- Questão 6 -->
+    <div>
+        <h3>Cálculo da Média Aritimética</h3>
+        Informe a 1ª Nota <br/>
+        <input id="nota1" type="number"><br/>
+        <div class="form-text">Ex.: 5.5 ou 9.0</div>
+        Informe a 2ª Nota <br/>
+        <input id="nota2" type="number"><br/>
+        <div class="form-text">Ex.: 5.5 ou 9.0</div>
+        Informe a 3ª Nota <br/>
+        <input id="nota3" type="number"><br/>
+        <div class="form-text">Ex.: 5.5 ou 9.0</div>
+        <button onclick="media()">Calcular</button> <br>
+        Sua média é: <span id="media1"></span>
+    </div>
+    
+    <!-- Questão 7 -->
+    <div>
+        <h3>Baskara</h3>
+        Informe o valor de A <br/>
+        <input id="a" type="number"><br/>
+        Informe o valor de B<br/>
+        <input id="b" type="number"><br/>
+        Informe o valor de C <br/>
+        <input id="c" type="number"><br/>
+        <button onclick="baskara()">Calcular</button> <br>
+        Raíz x1 = <span id="x1"></span> e a Raíz x2 = <span id="x2"></span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
