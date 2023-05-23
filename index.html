@@ -24,16 +24,26 @@
         <button onclick="areacirculo()">Calcular</button> <br>
         <p>O Resultado é <span id="areacir"></span></p>
     </div>
+    <!-- Questão 3 -->
+    <div>
+        <h3>Área do Triângulo</h3>
+        <p>Valor da Base</p>
+        <input id="basetri" type="number"><br/>
+        <p>Valor da Altura</p>
+        <input id="alturatri" type="number"><br>
+        <button onclick="areatriangulo()">Calcular</button>
+        <p>O Resultado é <span id="areatri"></span></p> 
+    </div>
     
     <!-- Questão 3 -->
     <div>
         <h3>Hipotenusa</h3>
         <p>Informe o Cateto Oposto</p>
         <input id="cateto" type="number"><br/>
-        <div class="form-text">Ex.: 3.78 ou 9</div>
+        <div class="form-text">Ex.: 3.78</div>
         <p>Informe o Cateto Adjacente</p>
         <input id="catetoa" type="number"><br/>
-        <div class="form-text">Ex.: 9 ou 3.78</div>
+        <div class="form-text">Ex.: 3.78</div>
         <button onclick="hipotenusa()">Calcular</button> <br>
         <p>O Resultado é <span id="hipot"></span></p>
         
@@ -42,23 +52,25 @@
     <!-- Questão 4 -->
     <div>
         <h3>Conversão do Dólar</h3>
-        Informe a cotação do dólar <br/>
+        <p>Informe a cotação do dólar</p>
         <input id="cotacaodolar" type="number"><br/>
-        <div class="form-text">Ex.: 3.78 ou 9.00</div>
-        Informe o valor em reais <br/>
+        <div class="form-text">Ex.: 5.00</div>
+        <p>Informe o valor em reais </p>
         <input id="valorreais" type="number"><br/>
-        <div class="form-text">Ex.: 9.00 ou 3.78</div>
-        <button onclick="conversaodolar()">Calcular</button> <br>
-        O valor em dólar é igual a $<span id="dolar"></span>
+        <div class="form-text">Ex.: 5.00</div>
+        <button onclick="conversaodolar()">Calcular</button>
+        <p>O valor em dólar é igual a $<span id="dolar"></span></p>
+        
     </div>
     
     <!-- Questão 5 -->
     <div>
         <h3>Conversão Temperatura °C para °F</h3>
-        Informe a temperatura em graus °C <br/>
+        <p>Informe a temperatura em graus °C</p>
         <input id="tempcelsius" type="number"><br/>
-        <button onclick="temperatura()">Calcular</button> <br>
-        A temperatura em Fahrenheit é: <span id="fahrenheit"></span>°F
+        <button onclick="temperatura()">Calcular</button>
+        <p>A temperatura em Fahrenheit é: <span id="fahrenheit"></span>°F
+        </p>
     </div>
     
     <!-- Questão 6 -->
@@ -80,14 +92,15 @@
     <!-- Questão 7 -->
     <div>
         <h3>Baskara</h3>
-        Informe o valor de A <br/>
+        <p>Informe o valor de A</p>
         <input id="a" type="number"><br/>
-        Informe o valor de B<br/>
+        <p>Informe o valor de B</p>
         <input id="b" type="number"><br/>
-        Informe o valor de C <br/>
+        <p>Informe o valor de C</p>
         <input id="c" type="number"><br/>
         <button onclick="baskara()">Calcular</button> <br>
-        Raíz x1 = <span id="x1"></span> e a Raíz x2 = <span id="x2"></span>
+        <p>Raíz x1 = <span id="x1"></span> e a Raíz x2 = <span id="x2"></span>
+        </p>
     </div>
 
     <script src="js/script.js"></script>
