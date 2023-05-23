@@ -4,105 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>DOM</title>
 </head>
-<body>
-    <div>
-        <h3>Área do Retângulo</h3>
-        <p>Valor da Base</p>
-        <input id="base" type="number"><br/>
-        <p>Valor da Altura</p>
-        <input id="altura" type="number"><br>
-        <button onclick="area()">Calcular</button>
-        <p>O Resultado é <span id="arearet"></span></p> 
-    </div>
-    <!-- Questão 2 -->
-    <div>
-        <h3>Área do Círculo</h3>
-        <p>Informe o Raio</p>
-        <input id="raio" type="number"><br/>
-        <button onclick="areacirculo()">Calcular</button> <br>
-        <p>O Resultado é <span id="areacir"></span></p>
-    </div>
-    <!-- Questão 3 -->
-    <div>
-        <h3>Área do Triângulo</h3>
-        <p>Valor da Base</p>
-        <input id="basetri" type="number"><br/>
-        <p>Valor da Altura</p>
-        <input id="alturatri" type="number"><br>
-        <button onclick="areatriangulo()">Calcular</button>
-        <p>O Resultado é <span id="areatri"></span></p> 
-    </div>
-    
-    <!-- Questão 3 -->
-    <div>
-        <h3>Hipotenusa</h3>
-        <p>Informe o Cateto Oposto</p>
-        <input id="cateto" type="number"><br/>
-        <div class="form-text">Ex.: 3.78</div>
-        <p>Informe o Cateto Adjacente</p>
-        <input id="catetoa" type="number"><br/>
-        <div class="form-text">Ex.: 3.78</div>
-        <button onclick="hipotenusa()">Calcular</button> <br>
-        <p>O Resultado é <span id="hipot"></span></p>
-        
-    </div>
+<body style="background-color: azure;">
+    <div class="container">
+        <h1 class="d-flex justify-content-center">DOM</h1>
+        <!-- Questão 1 -->
+        <div class="card text-center mt-3">
+                <div class="card-header text-bg-info p-3">
+                    <h5 class="card-title text-white">Área do Retângulo</h5>
+                </div>
+                <div class="card-body">
+                <p class="card-text">Valor da Base</p>
+                <input id="base" type="number"><br/>
+                <p>Valor da Altura</p>
+                    <input id="altura" type="number"><br>
+                <button onclick="area()" class="btn btn-info mt-3 text-white">Calcular</button>
+                <p class="mt-3"><span id="arearet"></span></p> 
+                </div>
+        </div>
 
-    <!-- Questão 4 -->
-    <div>
-        <h3>Conversão do Dólar</h3>
-        <p>Informe a cotação do dólar</p>
-        <input id="cotacaodolar" type="number"><br/>
-        <div class="form-text">Ex.: 5.00</div>
-        <p>Informe o valor em reais </p>
-        <input id="valorreais" type="number"><br/>
-        <div class="form-text">Ex.: 5.00</div>
-        <button onclick="conversaodolar()">Calcular</button>
-        <p>O valor em dólar é igual a $<span id="dolar"></span></p>
+        <!-- Questão 2 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Área do Círculo</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe o Raio</p>
+            <input id="raio" type="number"><br/>
+            <button  onclick="areacirculo()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p class="mt-3"><span id="areacir"></span></p> 
+            </div>
+        </div>
+        <!-- Questão 3 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Área do Triângulo</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Valor da Base</p>
+            <input id="basetri" type="number"><br/>
+            <p class="card-text">Valor da Altura</p>
+            <input id="alturatri" type="number"><br/>
+            <button onclick="areatriangulo()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p class="mt-3"><span id="areatri"></span></p> 
+            </div>
+        </div>
         
-    </div>
-    
-    <!-- Questão 5 -->
-    <div>
-        <h3>Conversão Temperatura °C para °F</h3>
-        <p>Informe a temperatura em graus °C</p>
-        <input id="tempcelsius" type="number"><br/>
-        <button onclick="temperatura()">Calcular</button>
-        <p>A temperatura em Fahrenheit é: <span id="fahrenheit"></span>°F
-        </p>
-    </div>
-    
-    <!-- Questão 6 -->
-    <div>
-        <h3>Cálculo da Média Aritimética</h3>
-        Informe a 1ª Nota <br/>
-        <input id="nota1" type="number"><br/>
-        <div class="form-text">Ex.: 5.5 ou 9.0</div>
-        Informe a 2ª Nota <br/>
-        <input id="nota2" type="number"><br/>
-        <div class="form-text">Ex.: 5.5 ou 9.0</div>
-        Informe a 3ª Nota <br/>
-        <input id="nota3" type="number"><br/>
-        <div class="form-text">Ex.: 5.5 ou 9.0</div>
-        <button onclick="media()">Calcular</button> <br>
-        Sua média é: <span id="media1"></span>
-    </div>
-    
-    <!-- Questão 7 -->
-    <div>
-        <h3>Baskara</h3>
-        <p>Informe o valor de A</p>
-        <input id="a" type="number"><br/>
-        <p>Informe o valor de B</p>
-        <input id="b" type="number"><br/>
-        <p>Informe o valor de C</p>
-        <input id="c" type="number"><br/>
-        <button onclick="baskara()">Calcular</button> <br>
-        <p>Raíz x1 = <span id="x1"></span> e a Raíz x2 = <span id="x2"></span>
-        </p>
+        <!-- Questão 4 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Hipotenusa</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe o Cateto Oposto</p>
+            <input id="cateto" type="number"><br/>
+            <div class="form-text">Ex.: 3.78</div>
+            <p class="card-text">Informe o Cateto Adjacente</p>
+            <input id="catetoa" type="number"><br/>
+            <div class="form-text">Ex.: 3.78</div>
+            <button onclick="areatriangulo()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p class="mt-3"><span id="hipot"></span></p> 
+            </div>
+        </div>
+
+
+        <!-- Questão 5 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Conversão do Dólar</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe a cotação do dólar</p>
+            <input id="cotacaodolar" type="number"><br/>
+            <div class="form-text">Ex.: 5.00</div>
+            <p class="card-text">Informe o valor em reais</p>
+            <input id="valorreais" type="number"><br/>
+            <div class="form-text">Ex.: 5.00</div>
+            <button onclick="conversaodolar()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p class="mt-3"><span id="dolar"></span></p> 
+            </div>
+        </div>
+
+        <!-- Questão 6 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Conversão Temperatura °C para °F</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe a temperatura em graus °C</p>
+            <input id="tempcelsius" type="number"><br/>
+            <button onclick="temperatura()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p class="mt-3"><span id="fahrenheit"></span></p> 
+            </div>
+        </div>
+
+        <!-- Questão 7 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Cálculo da Média Aritimética</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe a 1ª Nota</p>
+            <input id="nota1" type="number"><br/>
+            <div class="form-text">Ex.: 5.5 ou 9.0</div>
+            <p class="card-text">Informe a 2ª Nota</p>
+            <input id="nota2" type="number"><br/>
+            <div class="form-text">Ex.: 5.5 ou 9.0</div>
+            <p class="card-text">Informe a 3ª Nota</p>
+            <input id="nota3" type="number"><br/>
+            <div class="form-text">Ex.: 5.5 ou 9.0</div>
+            <button onclick="media()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p class="mt-3"><span id="media1"></span></p> 
+            </div>
+        </div>
+        
+        <!-- Questão 8 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Baskara</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe o valor de A</p>
+            <input id="a" type="number"><br/>
+            <p class="card-text">Informe o valor de B</p>
+            <input id="b" type="number"><br/>
+            <p class="card-text">Informe o valor de C</p>
+            <input id="c" type="number"><br/>
+            <button onclick="baskara()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p><span id="x1"></span> <br/> <span id="x2"></span>
+            </p>
+            </div>
+        </div>
+
+        <!-- Questão 9 -->
+        <div class="card text-center mt-3">
+            <div class="card-header text-bg-info p-3">
+                <h5 class="card-title text-white">Km/h para m/s</h5>
+            </div>
+            <div class="card-body">
+            <p class="card-text">Informe o valor em km/h</p>
+            <input id="kmh" type="number"><br/>
+            <button onclick="conversaoVelocidade()" class="btn btn-info mt-3 text-white">Calcular</button>
+            <p><span id="resms"></span>
+            </p>
+            </div>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

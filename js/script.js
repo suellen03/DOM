@@ -74,3 +74,12 @@ function baskara(){
     document.getElementById('x2').innerHTML = raiz2 
 
 }
+
+//Km/h para m/s
+function conversaoVelocidade() {
+
+    let kmhora = parseFloat(document.getElementById('kmh').value)
+    let mSegundo = parseFloat(kmhora / 3.6)
+    
+    document.getElementById('resms').innerHTML = mSegundo
+}
