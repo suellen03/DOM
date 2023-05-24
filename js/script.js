@@ -4,7 +4,7 @@ function area(){
     let altura = parseFloat(document.getElementById('altura').value);
     let resultado = parseFloat(base * altura);
 
-    document.getElementById('arearet').innerHTML = resultado
+    document.getElementById('arearet').innerHTML = "A área do retângulo é = " + resultado
 }
 //Área do Círculo
 function areacirculo(){
@@ -12,7 +12,7 @@ function areacirculo(){
     const pi = 3.14
     let resultadocir = parseFloat(raio * raio * pi);
 
-    document.getElementById('areacir').innerHTML = resultadocir
+    document.getElementById('areacir').innerHTML = "A área do círculo é = " + resultadocir
 }
 //Área triângulo
 function areatriangulo(){
@@ -20,7 +20,7 @@ function areatriangulo(){
     let altura = parseFloat(document.getElementById('alturatri').value)
     let resultadotri = parseFloat(base * altura)/2
 
-    document.getElementById('areatri').innerHTML = resultadotri
+    document.getElementById('areatri').innerHTML = "A área do triângulo é = " + resultadotri
 
 }
 
@@ -30,7 +30,7 @@ function hipotenusa(){
     let cateto2 = parseFloat(document.getElementById('catetoa').value)
     let reshipotenusa = Math.sqrt(parseFloat(cateto1 * cateto1) + parseFloat(cateto2 * cateto2)).toFixed(2)
 
-    document.getElementById('hipot').innerHTML = reshipotenusa
+    document.getElementById('hipot').innerHTML = "Hipotenusa = " + reshipotenusa
 
 }
 
@@ -39,15 +39,19 @@ function conversaodolar(){
     let cotacao = parseFloat(document.getElementById('cotacaodolar').value)
     let reais = parseFloat(document.getElementById('valorreais').value)
     let dolar = parseFloat(reais) / parseFloat(cotacao).toFixed(2)
-
-    document.getElementById('dolar').innerHTML = dolar 
+    
+    if (cotacao == 0) {
+        document.getElementById('dolar').innerHTML = 'Não existe divisão por 0'
+    } else {
+        document.getElementById('dolar').innerHTML = "$" + dolar  
+    }
 }
 //Conversão °C para °F
 function temperatura(){
     let celsius = parseFloat(document.getElementById('tempcelsius').value)
     let tempf = parseFloat(celsius * 1.8 + 32).toFixed(1)
     
-    document.getElementById('fahrenheit').innerHTML = tempf 
+    document.getElementById('fahrenheit').innerHTML = tempf + "°F"
 }
 
 //Média Aritimética
@@ -57,7 +61,7 @@ function media(){
     let nota3 = parseFloat(document.getElementById('nota3').value)
     let mediaa = parseFloat((nota1 + nota2 + nota3) / 3).toFixed(1)
 
-    document.getElementById('media1').innerHTML = mediaa 
+    document.getElementById('media1').innerHTML = "A média é " + mediaa 
 }
 
 //Baskara
@@ -70,8 +74,13 @@ function baskara(){
     let raiz1 = parseFloat((-b + (Math.sqrt(delta))) / (2*a))
     let raiz2 = parseFloat((-b - (Math.sqrt(delta)))/ (2*a))
 
-    document.getElementById('x1').innerHTML = raiz1 
-    document.getElementById('x2').innerHTML = raiz2 
+    if (delta < 0) {
+        document.getElementById('x').innerHTML = "Não existem raízes reais"
+    } else {
+        document.getElementById('x1').innerHTML = "x' = " + raiz1 
+        document.getElementById('x2').innerHTML = "x'' = " + raiz2 
+    }
+    
 
 }
 
@@ -81,5 +90,36 @@ function conversaoVelocidade() {
     let kmhora = parseFloat(document.getElementById('kmh').value)
     let mSegundo = parseFloat(kmhora / 3.6)
     
-    document.getElementById('resms').innerHTML = mSegundo
+    document.getElementById('resms').innerHTML = mSegundo + " m/s"
 }
+
+
+function somar(){
+    let n1 = parseFloat(document.getElementById('n1').value)
+    let n2 = parseFloat(document.getElementById('n2').value)
+    let soma = parseFloat(n1 + n2)
+    document.getElementById('operacaomat').innerHTML = soma
+} 
+function subtrair(){
+    let n1 = parseFloat(document.getElementById('n1').value)
+    let n2 = parseFloat(document.getElementById('n2').value)
+    let subtracao = parseFloat(n1 - n2)
+    document.getElementById('operacaomat').innerHTML = subtracao
+} 
+function multiplicar(){
+    let n1 = parseFloat(document.getElementById('n1').value)
+    let n2 = parseFloat(document.getElementById('n2').value)
+    let multiplica = parseFloat(n1 * n2)
+    document.getElementById('operacaomat').innerHTML = multiplica
+} 
+function dividir(){
+    let n1 = parseFloat(document.getElementById('n1').value)
+    let n2 = parseFloat(document.getElementById('n2').value)
+    let dividi = parseFloat(n1 / n2)
+    
+    if (n2 == 0) {
+        document.getElementById('operacaomat').innerHTML = "Não existe divisão por 0"
+    } else {
+        document.getElementById('operacaomat').innerHTML = dividi
+    }
+} 

@@ -1,0 +1,17 @@
+.card-header {
+    background-color: #000063;
+}
+.card-body{
+    background-color: #def7ff;
+}
+.rounded {
+    background-color: #def7ff;
+    
+}
+.btn{
+    background-color: #000063;
+    border-color: #000063;
+}
+.btn:hover{
+    background: #4425d3;
+}

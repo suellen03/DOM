@@ -5,33 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>DOM</title>
 </head>
-<body style="background-color: rgb(26, 23, 23);">
+<body style="background-image: url(img/image2.jpg);">
     <div class="container">
         <h1 class="d-flex justify-content-center text-white">DOM</h1>
         <!-- Questão 1 -->
         <div class="card text-center mt-3">
-                <div class="card-header text-bg-info p-3">
+                <div class="card-header p-3">
                     <h5 class="card-title text-white">Área do Retângulo</h5>
                 </div>
                 <div class="card-body">
-                <p class="card-text">Valor da Base</p>
+                <p class="card-text fs-5">Valor da Base</p>
                 <input id="base" type="number" class="rounded"><br/>
-                <p>Valor da Altura</p>
+                <p class="card-text mt-2 fs-5">Valor da Altura</p>
                     <input id="altura" type="number" class="rounded"><br>
-                <button onclick="area()" class="btn btn-info mt-3 text-white">Calcular</button>
+                <button onclick="area()" class="btn mt-3 text-white">Calcular</button>
                 <p class="mt-3"><span id="arearet"></span></p> 
                 </div>
         </div>
 
         <!-- Questão 2 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Área do Círculo</h5>
             </div>
             <div class="card-body">
-            <p class="card-text">Informe o Raio</p>
+            <p class="card-text fs-5">Informe o Raio</p>
             <input id="raio" type="number" class="rounded"><br/>
             <button  onclick="areacirculo()" class="btn btn-info mt-3 text-white">Calcular</button>
             <p class="mt-3"><span id="areacir"></span></p> 
@@ -39,13 +40,13 @@
         </div>
         <!-- Questão 3 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Área do Triângulo</h5>
             </div>
             <div class="card-body">
-            <p class="card-text">Valor da Base</p>
+            <p class="card-text fs-5">Valor da Base</p>
             <input id="basetri" type="number" class="rounded"><br/>
-            <p class="card-text">Valor da Altura</p>
+            <p class="card-text mt-2 fs-5">Valor da Altura</p>
             <input id="alturatri" type="number" class="rounded"><br/>
             <button onclick="areatriangulo()" class="btn btn-info mt-3 text-white">Calcular</button>
             <p class="mt-3"><span id="areatri"></span></p> 
@@ -54,7 +55,7 @@
         
         <!-- Questão 4 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Hipotenusa</h5>
             </div>
             <div class="card-body">
@@ -72,7 +73,7 @@
 
         <!-- Questão 5 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Conversão do Dólar</h5>
             </div>
             <div class="card-body">
@@ -89,7 +90,7 @@
 
         <!-- Questão 6 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Conversão Temperatura °C para °F</h5>
             </div>
             <div class="card-body">
@@ -102,7 +103,7 @@
 
         <!-- Questão 7 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Cálculo da Média Aritimética</h5>
             </div>
             <div class="card-body">
@@ -122,7 +123,7 @@
         
         <!-- Questão 8 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Baskara</h5>
             </div>
             <div class="card-body">
@@ -133,14 +134,14 @@
             <p class="card-text fs-5">Informe o valor de C</p>
             <input id="c" type="number" class="rounded"><br/>
             <button onclick="baskara()" class="btn btn-info mt-3 text-white">Calcular</button>
-            <p><span id="x1"></span> <br/> <span id="x2"></span>
+            <p><span id="x"></span> <span id="x1"></span> <br/> <span id="x2"></span>
             </p>
             </div>
         </div>
 
         <!-- Questão 9 -->
         <div class="card text-center mt-3">
-            <div class="card-header text-bg-info p-3">
+            <div class="card-header p-3">
                 <h5 class="card-title text-white">Km/h para m/s</h5>
             </div>
             <div class="card-body">
@@ -150,8 +151,35 @@
             <p><span id="resms"></span>
             </p>
             </div>
-        </div> </div> <br>
-    </div>
+        </div> 
+        <!-- Operações Matemáticas -->
+        <div class="card text-center mt-3">
+            <div class="card-header p-3">
+                <h5 class="card-title text-white">Operações Matemáticas</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text fs-5">Informe o 1º número</p>
+                <input id="n1" type="number" class="rounded"><br/>
+                <p class="card-text fs-5">Informe o 2º número</p>
+                <input id="n2" type="number" class="rounded"><br/>
+                <button onclick="somar()" class="btn btn-info mt-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/></svg>
+                </button>
+                <button onclick="subtrair()" class="btn btn-info mt-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                </button>
+                <button onclick="multiplicar()" class="btn btn-info mt-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>
+                </button>
+                <button onclick="dividir()" class="btn btn-info mt-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/></svg>          
+                </button>
+            <p class="mt-2"><span id="operacaomat"></span>
+            </p>
+            </div>
+        </div>
+
+    </div> <br>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
