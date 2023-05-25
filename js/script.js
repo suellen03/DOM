@@ -61,7 +61,11 @@ function media(){
     let nota3 = parseFloat(document.getElementById('nota3').value)
     let mediaa = parseFloat((nota1 + nota2 + nota3) / 3).toFixed(1)
 
-    document.getElementById('media1').innerHTML = "A média é " + mediaa 
+    if (mediaa >= 6) {
+        document.getElementById('media1').innerHTML = "Aprovado com média: " + mediaa 
+    } else {
+        document.getElementById('media1').innerHTML = "Reprovado com média: " + mediaa 
+    }
 }
 
 //Baskara
